@@ -46,5 +46,5 @@ class Server:
         wrapper = self.dataset()
         if (page_size - page) > len(wrapper):
             return []
-        res = index_range(page, page_size)
-        return res
+        first, last = index_range(page, page_size)
+        return wrapper[first:last]
