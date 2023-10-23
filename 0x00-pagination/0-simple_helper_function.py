@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-''' A helper function to that returns a tuple of 
+''' A helper function to that returns a tuple of
 pagination limits'''
 
 
 from typing import Tuple
+
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
     '''simple helper function'''
