@@ -8,7 +8,7 @@ from typing import Tuple
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
     '''simple helper function'''
-    
+
     last_obj = page * page_size
     first_obj = last_obj - page_size
     return first_obj, last_obj
