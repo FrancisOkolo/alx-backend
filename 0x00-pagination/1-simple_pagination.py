@@ -31,6 +31,8 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """ implement the helper function
+        """
         assert isinstance(page, int), "page and/or page_size are not ints"
         assert isinstance(page_size, int), "page and/or page_size are not ints"
         assert page > 0, "raised with negative values"
