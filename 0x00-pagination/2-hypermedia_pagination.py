@@ -49,7 +49,8 @@ class Server:
         first, last = index_range(page, page_size)
         return wrapper[first:last]
 
-def get_hyper(self, page: int, page_size: int) -> dict:
+
+    def get_hyper(self, page: int, page_size: int) -> dict:
         """Hypermedia pagination"""
         data = self.get_page(page, page_size)
         size_all_pages = math.ceil(len(self.get_dataset()) / page_size)
