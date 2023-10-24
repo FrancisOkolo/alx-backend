@@ -9,7 +9,7 @@ from Base import BaseCaching
 class BasicCache(BaseCaching):
     '''initializing'''
     def __init__(self):
-        super().self.cache_data = {}
+        self.cache_data = {}
 
     def put(self, key, item):
         '''add to the cache'''
