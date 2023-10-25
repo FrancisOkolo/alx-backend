@@ -19,7 +19,7 @@ class FIFOCache(BaseCaching):
         elif len(self.cache_data) > BaseCaching.MAX_ITEMS:
             lst = [(keyy, itemm) for keyy, itemm in self.cache_data.items()]
             first_item = lst.pop(0)
-            first_item = {a: b for a, b in first_item}
+            first_item = {first_item[0]: first_item[1]}
             updated_dict = {ke: va for ke, va in lst}
             self.cache_data = updated_dict
             self.cache_data[key] = item
