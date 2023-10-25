@@ -17,9 +17,10 @@ class FIFOCache(BaseCaching):
         if key is None or item is None:
             return None
         elif len(self.cache_data) > BaseCaching.MAX_ITEMS:
-            lst = list(self.cache_data)
+            lst = [(keyy, itemm) for keyy, itemm in self.cache_data.items()]
             first_item = lst.pop(0)
-            updated_dict = dict(lst)
+            first_item = {a: b for a, b in first_item}
+            updated_dict = {ke: va for ke, va in lst}
             self.cache_data = updated_dict
             self.cache_data[key] = item
             print("DISCARD: ", first_item[0])
