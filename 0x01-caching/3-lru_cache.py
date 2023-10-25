@@ -31,6 +31,7 @@ class LRUCache(BaseCaching):
                 last_item = lst.pop(1)
             else:
                 last_item = lst.pop(0)
+            self.record_cache.clear()
             last_item = list({last_item[0]: last_item[1]})
             updated_dict = {ke: va for ke, va in lst}
             self.cache_data = updated_dict
