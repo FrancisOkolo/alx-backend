@@ -16,7 +16,7 @@ class FIFOCache(BaseCaching):
         '''add to the cache while implementing FIFO'''
         if key is None or item is None:
             return None
-        elif len(self.cache_data) > BaseCaching.MAX_ITEMS:
+        elif len(self.cache_data) >= BaseCaching.MAX_ITEMS:
             lst = [(keyy, itemm) for keyy, itemm in self.cache_data.items()]
             first_item = lst.pop(0)
             first_item = {first_item[0]: first_item[1]}
