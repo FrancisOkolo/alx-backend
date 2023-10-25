@@ -23,7 +23,7 @@ class FIFOCache(BaseCaching):
             updated_dict = {ke: va for ke, va in lst}
             self.cache_data = updated_dict
             self.cache_data[key] = item
-            print("DISCARD: ", first_item[0])
+            print("DISCARD:", first_item[0])
         else:
             self.cache_data[key] = item
 
